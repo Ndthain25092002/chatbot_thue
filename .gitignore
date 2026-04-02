@@ -29,3 +29,7 @@ dist/
 
 # Large local datasets
 backend/data/tax_fee_legal_documents.json
+
+# Generated FAISS artifacts
+backend/data/faiss.index
+backend/data/faiss.meta.json

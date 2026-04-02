@@ -20,7 +20,7 @@ class LegalService:
             return cached
 
         query_embedding = self.embedder.embed_query(user_query)
-        contexts = self.retriever.retrieve(query_embedding=query_embedding, top_k=8)
+        contexts = self.retriever.retrieve(query_embedding=query_embedding, top_k=20)
         reranked_contexts = self.reranker.rerank(user_query, contexts, top_k=5)
         result = self.generator.generate_answer(user_query, reranked_contexts)
         self.cache.set(cache_key, result)

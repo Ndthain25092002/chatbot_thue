@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Chatbot Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <main class="shell">
+    <aside class="brand-panel">
+      <p class="eyebrow">Tax and Fee Assistant</p>
+      <h1>Legal Chatbot</h1>
+      <p class="sub">
+        Giao dien chat don gian de hoi dap van ban phap ly.
+      </p>
+
+      <div class="status-card">
+        <p class="label">Che do tra loi</p>
+        <label class="switch-row" for="mockMode">
+          <span>Mock mode (chay ngay)</span>
+          <input id="mockMode" type="checkbox" checked />
+        </label>
+        <p class="hint">
+          Tat mock mode de goi API that.
+        </p>
+      </div>
+    </aside>
+
+    <section class="chat-panel">
+      <header class="chat-header">
+        <div>
+          <p class="label">API base URL</p>
+          <input id="apiBase" class="api-input" value="http://127.0.0.1:8000" />
+        </div>
+        <button id="clearBtn" class="ghost-btn" type="button">Clear</button>
+      </header>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <form id="chatForm" class="composer">
+        <input
+          id="promptInput"
+          type="text"
+          placeholder="Nhap cau hoi phap ly..."
+          autocomplete="off"
+          required
+        />
+        <button id="sendBtn" type="submit">Gui</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
